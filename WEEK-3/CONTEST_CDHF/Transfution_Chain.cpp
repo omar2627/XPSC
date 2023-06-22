@@ -23,7 +23,7 @@ int main()
         int ans=0,mx=0;
 for(auto it:mp)
 {
-    if(it.second>mx)
+    if(it.second>mx && it.first!="O" && it.first!="AB")
     {
         mx=it.second;
         string x=it.first;
