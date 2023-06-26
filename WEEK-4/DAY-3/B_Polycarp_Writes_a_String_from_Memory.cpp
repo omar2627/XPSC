@@ -16,48 +16,24 @@ int main()
         set<char>c;
         set<char>d;
         int day=0;
-         int i=0;
-         while(i<n)
-         {
+        for(int i=0; i<n; i++)
+        {
             c.insert(s[i]);
             d.insert(s[i]);
-            if(c.size()==3)
+            if(c.size()==4)
             {
-                if(i<n-1)
-                {
-                    c.insert(s[i+1]);
-                }
-                  if(c.size()==3)
-                 {
-                     i +=2;
-                     day++;
-                     c.clear();
-                 }
-                 else
-                 {
-                     i++;
-                     day++;
-                     c.clear();
-                 }
-            }
-            else
-            {
-                i++;
-                continue;
+                 day++;
+                 c.clear();
+                c.insert(s[i]);
             }
         }
-        if(c.size()<3)
+        if(c.size()<=3)
         {
             day++;
+            c.clear();
         }
-        if(d.size()<3)
-        {
-            cout<<1<<endl;
-        }
-        else
-        {
             cout<<day<<endl;
-        day=0;
-        }
+            day=0;
+            d.clear();
     }
 }

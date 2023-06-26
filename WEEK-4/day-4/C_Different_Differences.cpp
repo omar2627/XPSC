@@ -1,7 +1,6 @@
 /*
-PBL  -->  https://codeforces.com/contest/1772/problem/C
+PBL -->  https://codeforces.com/contest/1772/problem/C
 */
-
 
 #include<bits/stdc++.h>
 using namespace std;
