@@ -13,7 +13,7 @@ int main()
         int a,b,c,x,y;
         cin>>a>>b>>c>>x>>y;
   x=max(0,x-a);
-  y=max(0,y-a);
+  y=max(0,y-b);
   if((x+y)<=c)
   {
       cout<<"YES"<<endl;
