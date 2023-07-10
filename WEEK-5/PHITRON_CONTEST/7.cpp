@@ -26,11 +26,12 @@ int main()
             p.push_back(it.first);
         }
     }
-    vector<int>q;
+    vector<int>q,h;
     for(int i=0; i<n; i++)
     {
         if(mp[v[i]]==1)
         {
+            h.push_back(v[i]);
             bool ans=true;
             for(int j=0; j<p.size(); j++)
             {
@@ -45,8 +46,19 @@ int main()
             {
                 q.push_back(v[i]);
             }
+            else
+            {
+                ans=true;
+            }
         }
     }
     sort(q.begin(),q.end());
-    cout<<q[1]<<" "<<q[0]<<endl;
+    if(q.size()>=2)
+    {
+        cout<<q[1]<<" "<<q[0]<<endl;
+    }
+    else
+    {
+        cout<<h[0]<<" "<<h[1]<<endl;
+    }
 }
