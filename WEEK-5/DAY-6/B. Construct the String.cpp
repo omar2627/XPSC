@@ -18,7 +18,7 @@ int main()
         while(unq--)
         {
 
-            s +=string(1,ch);
+            s.push_back(ch);
             ch++;
         }
         string k=s;
