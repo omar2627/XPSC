@@ -12,7 +12,7 @@ int main()
     {
         int n,k;
         cin>>n>>k;
-        unordered_map<long long,multiset<int>>mp;
+        map<long long,multiset<int>>mp;
         vector<long long>v(n);
         for(int i=0; i<n; i++)
         {
