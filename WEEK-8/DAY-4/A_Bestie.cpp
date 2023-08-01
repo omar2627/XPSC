@@ -34,8 +34,6 @@ else
     int ans=0;
  for(long long i=n; i>=1; i--)
 {
-    long long m=__gcd(i,v[i]);
-
     if(__gcd(i,v[i])==1)
     {
         cout<<(n-i)+1<<endl;
