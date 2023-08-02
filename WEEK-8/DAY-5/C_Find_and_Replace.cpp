@@ -2,6 +2,7 @@
 PBL --> https://codeforces.com/contest/1807/problem/C
 */
 
+
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -14,58 +15,44 @@ int main()
         string s;
         cin>>s;
         int x=0;
-        for(int i=0; i<n; i++)
+map<char,vector<int>>mp;
+for(int i=0; i<n; i++)
+{
+    mp[s[i]].push_back(i);
+}
+bool ans=true;
+for(auto it:mp)
+{
+    vector<int>x=it.second;
+    int cnt=0,cnt1=0;
+    for(int i=0; i<x.size(); i++)
+    {
+        if(x[i]%2==0)
         {
-            if(s[i]=='0' || s[i]=='1')
-            {
-                continue;
-            }
-            else
-            {
-                for(int j=i; j<n; j++)
-                {
-                    char p=s[i];
-                    if(p==s[j])
-                    {
-                        cout<<i<<" "<<s[j];
-                        if(x==0)
-                        {
-                            s[j]='0';
-                        }
-                        else
-                        {
-                            s[j]='1';
-                        }
-                    }
-                }
-                if(x==0)
-                {
-                    x=1;
-                }
-                else
-                {
-                    x=0;
-                }
-            }
-
-        }
-        bool ans=true;
-        for(int i=0; i<n-1; i++)
-        {
-            if(s[i]==s[i+1])
-            {
-                ans=false;
-                break;
-            }
-        }
-        cout<<s<<endl;
-        if(ans)
-        {
-            cout<<"YES"<<endl;
+            cnt++;
         }
         else
         {
-            cout<<"NO"<<endl;
+            cnt1++;
         }
+    }
+    if(cnt==x.size() || cnt1==x.size())
+    {
+        continue;
+    }
+    else
+    {
+        ans=false;
+        break;
+    }
+}
+if(ans)
+{
+    cout<<"YES"<<endl;
+}
+else
+{
+    cout<<"NO"<<endl;
+}
     }
 }
