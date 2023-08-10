@@ -17,11 +17,8 @@ int main()
         }
         else
         {
-//            long long mx=max(a,b);
        long long mn=min(a,b);
-//            long long ans=floor(mx/4);
-//            long long ans1=min(ans,mn);
-//            cout<<ans1<<endl;
+
 long long ans=floor((a+b)/4);
 long long ans1=min(ans,mn);
 cout<<ans1<<endl;
