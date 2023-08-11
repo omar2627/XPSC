@@ -11,11 +11,9 @@ int main()
     {
         int n;cin>>n;
      vector<long long>v(n);
-    map<long long,int>mp;
     for(int i=0; i<n; i++)
     {
         cin>>v[i];
-        mp[v[i]]++;
     }
     vector<pair<int,long long>>x;
     for(auto it:mp)
