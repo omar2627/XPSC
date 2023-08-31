@@ -1,6 +1,3 @@
-/*
-PBL -->
-*/
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -24,6 +21,10 @@ int main()
             bool an=true;
             for(int i=0; i<q; i++)
             {
+                if(ans<0)
+                {
+                    ans=0;
+                }
                 if(s[i]=='+')
                 {
                     ans++;
@@ -43,7 +44,7 @@ int main()
             {
                 ans=0;
             }
-            if(ans+a==n-1 && an && s[q-1]=='+')
+            if(ans+a==n-1 && an)
             {
                 cout<<"MAYBE"<<endl;
             }
