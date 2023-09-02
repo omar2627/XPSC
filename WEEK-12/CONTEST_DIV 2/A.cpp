@@ -31,7 +31,7 @@ int main()
             k +=s[i];
             for(int j=i+1; j<s.size(); j++)
             {
-                k +=s[j];
+                   k +=s[j];
                 int a=stoi(k);
                 bool b=is_prime(a);
                 if(b)
@@ -40,6 +40,10 @@ int main()
                     ans=true;
                     break;
                 }
+           if(i<n-2)
+           {
+
+           }
             }
             if(ans)
             {
