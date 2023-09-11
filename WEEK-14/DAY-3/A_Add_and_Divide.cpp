@@ -21,16 +21,6 @@ int main()
         {
             int cholbe=sqrt(a);
                         int mn=INT_MAX;
-
-            int op=0;
-            int m=a;
-            while(m>0)
-            {
-                m =m/b;
-                op++;
-            }
-            cout<<1<<endl;
-            mn=min(mn,op);
             op=0;
             for(int i=1; i<=cholbe; i++)
             {
