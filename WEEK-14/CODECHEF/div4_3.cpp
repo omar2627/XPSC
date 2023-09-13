@@ -1,5 +1,5 @@
 /*
-PBL --> https://codeforces.com/contest/1867/problem/B
+PBL -->
 */
 
 #include<bits/stdc++.h>
@@ -10,6 +10,6 @@ int main()
     while(t--)
     {
         int n;cin>>n;
-        string s;cin>>s;
+        cout<<1<<" "<<1<<" "<<(n-2)<<endl;
     }
 }

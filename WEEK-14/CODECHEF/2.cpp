@@ -1,6 +1,4 @@
-/*
-PBL --> https://codeforces.com/contest/1867/problem/B
-*/
+
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -10,6 +8,8 @@ int main()
     while(t--)
     {
         int n;cin>>n;
-        string s;cin>>s;
+        int x=n*1000;
+        int ans=x/100;
+        cout<<ans<<endl;
     }
 }
