@@ -80,14 +80,14 @@ int main()
        for(int i=0; i<sz1; i++)
        {
 
-           if(mp2[v[i]]>0)
+           if(mp2[v[i]-1]>0)
            {
                 ans++;
-               mp2[v[i]]--;
+               mp2[v[i]-1]--;
            }
-           else if(mp2[v[i]-1]>0){
+           else if(mp2[v[i]]>0){
             ans++;
-            mp2[v[i]-1]--;
+            mp2[v[i]]--;
            }
            else if(mp2[v[i]+1]>0){
             ans++;
@@ -103,14 +103,14 @@ int main()
 
         for(int i=0; i<sz2; i++)
        {
-           if(mp1[v1[i]]>0)
+           if(mp1[v1[i]-1]>0)
            {
                 ans++;
-               mp1[v1[i]]--;
+               mp1[v1[i]-1]--;
            }
-           else if(mp1[v1[i]-1]>0){
+           else if(mp1[v1[i]]>0){
             ans++;
-            mp1[v1[i]-1]--;
+            mp1[v1[i]]--;
            }
            else if(mp1[v1[i]+1]>0){
             ans++;
