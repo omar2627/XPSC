@@ -22,7 +22,7 @@ int main()
                 break;
             }
         }
-        if(check)cout<<"YES1"<<endl;
+        if(check)cout<<"YES"<<endl;
         else
         {
              bool hobe=true;
@@ -36,7 +36,7 @@ int main()
         }
         if(!hobe)
         {
-            cout<<"NO1"<<endl;
+            cout<<"NO"<<endl;
         }
         else
         {
