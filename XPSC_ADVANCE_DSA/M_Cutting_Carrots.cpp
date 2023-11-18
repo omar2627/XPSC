@@ -5,21 +5,31 @@ OMAR
          /_\
         /_t2\
        /_t1_\     H
-      a
-amk ekta isosceles triangle(shomodi bahu trivuje) shape er ekta carrot dibe and shate ekta height dewa thakbe IT angle er
+          a
+        a=1
+amk ekta isosceles triangle(shomodi bahu trivuje) shape er ekta carrot dibe and shate ekta height dewa thakbe ISOSCELES TRIANGLE  er
 base(a) hobe 1.we know isosceles triangle er duita bahu same. ekhon question holo ei triangle ke (n-1) vage vag korte hobe.
 vag korle (n-1) ta trapezium hobe . ekhon isosceles er upper(x) theke every trapezium er upper base er height ber korte hobe.
 trapezium er area nibo lower base(a) theke ekbare upper base(t2) porjonto .t1 and t2 ke ekta trapezium dore ekta height ber
 korbo binary search er maddome .
 
-Area of Trapezium=1/2*(upper_base+lower_base)*height
+Area of Trapezium=(1/2)*( upper_base + lower_base ) * height
 
-Area of Triangle(Carrot)=0.5*total_height.
+Area of Triangle(Carrot)=0.5*total_height.* base
 
 Area of each part= A_O_T/n;  shomodibahu er area ke n diya bag korle n bag er area pawa jabe jekhane shobar uporer ta hobe
                                                  triangle er area baki nicher gula hobe Trapezium  er area. Area jani ekhon every t
 
 */
+
+#inlcude<bits/stdc++.h>
+usinsg namespace std;
+
+int main()
+{
+    double n;cin>>n>>height;
+    double total_area_isosceles=0.5*base*height;
+}
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -42,38 +52,6 @@ double cut_height(double need) {
     }
     return height - cut;
 }
-
-/*
-একটা ত্রিভূজ কাটলে শুধুমাত্র সবার উপরের ভাগ বাদে বাকি সব ট্রাপিজিয়াম হিসেবে
-ভাগ হয়।
-    /----------\ উপরের বেজ
-   /____________\ নীচের বেজ
-ট্রাপিজিয়ামের ক্ষেত্রফল হলো ০.৫ গুণ উপরের বেজ + নিচের বেজ গুণ উচ্চতা
-
-আমরা প্রত্যেকবার binary search করে একেকটা উচ্চতা নিচ্ছি। এরপর ট্রাপিজিয়ামের
-উপরের বেজ বের করে ক্ষেত্রফল বের করে চেক করতেসি যে আমাদের যতোটুক দরকার
-ততোটুক এর সাথে মিলতেসে কিনা।
-ট্রাপিজিয়াম এর উপরের বেজ কিভাবে বের করতেসি??
-=> নিচের বেজ সবসময় ১(দেওয়া আছে)। আমাদের গাজর হলো একটা সমদ্বিবাহু ত্রিভুজ।
-আমরা বাইনারি সার্চ করে যেই হাইট না নিচ্ছি(cut), ধরি সেইটা দিয়ে আমরা একটা ছোট
-ত্রিভুজ বানাবো। এই ছোট ত্রিভুজের ভূমিই হলো আমাদের এই ভাগ প্রত্যেক ভাগের
-ট্রাপিজিয়ামের উপরের বেজ।
- *         /\
- *        /  \ এই চিত্র দেখলেই বুঝা যায়।
- *       /  x \
- *      /------\ ধরি, আমরা এই বরাবর কাট করেছি। তাহলে, এর উপরের অংশে কিন্তু একটা ছোট ত্রিভুজ সৃষ্টি হয়েছে।
- *     /        \
- *    /----------\
- *   /____________\
-এবার এই ছোট x ত্রিভুজ এর ভূমিই কিন্তু আমাদের সেই ট্রাপিজিয়াম এর আপার বেজ।
-তাহলে একটা অনুপাত করা যাক।
-ছোট ত্রিভুজের ভূমি    ছোট ত্রিভুজের উচ্চতা(cut)
----------------- = -------------------
-বড় ত্রিভুজের ভূমি     বড় ত্রিভুজের উচ্চতা(height)
-
-হিসাব নিকাশ শেষে সেই ট্রাপিজিয়ামের আপার বেজ দাড়ায় = height - cut / height
-বড় ত্রিভুজের ভুমি কিন্তু ১(প্রশ্নেই দেওয়া আছে)।
-*/
 
 int main() {
     cin >> n >> height;
